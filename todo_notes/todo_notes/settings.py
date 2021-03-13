@@ -171,11 +171,21 @@ LOGGING = {
         }
     },
     'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'INFO',
+        },
+        '': {
+            'level': 'DEBUG',
+            'handlers': ['console', 'file_debug'],
+            'propagate': True
+        },
         'debug_logger': {
             'level': 'DEBUG',
             'handlers': ['console', 'file_debug']
         },
-        'info_logger': {
+        'django.request': {
             'level': 'INFO',
             'handlers': ['console']
         }

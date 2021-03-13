@@ -21,3 +21,6 @@ class Todo(models.Model):
     updated = models.DateField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.project

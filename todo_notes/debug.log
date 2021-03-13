@@ -1,0 +1,12 @@
+2021-03-13 05:33:19,683 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2021-03-13 05:33:47,777 django.utils.autoreload INFO     /Users/evgeniyshamanin/PycharmProjects/pythonProject/todo_notes/todo_notes/settings.py changed, reloading.
+2021-03-13 05:33:47,778 asyncio      DEBUG    Using selector: KqueueSelector
+2021-03-13 05:36:33,881 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2021-03-13 05:38:03,679 django.utils.autoreload INFO     /Users/evgeniyshamanin/PycharmProjects/pythonProject/todo_notes/todo_notes/settings.py changed, reloading.
+2021-03-13 05:38:03,679 asyncio      DEBUG    Using selector: KqueueSelector
+2021-03-13 05:38:04,380 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2021-03-13 05:40:40,131 django.utils.autoreload INFO     /Users/evgeniyshamanin/PycharmProjects/pythonProject/todo_notes/todo_notes/settings.py changed, reloading.
+2021-03-13 05:40:40,132 asyncio      DEBUG    Using selector: KqueueSelector
+2021-03-13 05:40:40,748 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2021-03-13 07:02:46,408 django.utils.autoreload INFO     /Users/evgeniyshamanin/PycharmProjects/pythonProject/todo_notes/todo_notes/settings.py changed, reloading.
+2021-03-13 07:02:46,414 asyncio      DEBUG    Using selector: KqueueSelector

@@ -470,3 +470,38 @@ AssertionError: You cannot call `.save()` after accessing `serializer.data`.If y
 2021-03-13 19:35:39,466 django.server WARNING  "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
 2021-03-13 19:35:52,408 asyncio      DEBUG    Using selector: KqueueSelector
 2021-03-13 19:35:52,530 asyncio      DEBUG    Using selector: KqueueSelector
+2021-03-17 14:05:11,701 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2021-03-17 14:05:13,946 django.request WARNING  Not Found: /equipments/
+2021-03-17 14:05:13,947 django.server WARNING  "GET /equipments/ HTTP/1.1" 404 2405
+2021-03-17 14:05:18,186 django.request WARNING  Not Found: /equipments/
+2021-03-17 14:05:18,186 django.server WARNING  "GET /equipments/ HTTP/1.1" 404 2405
+2021-03-17 14:05:18,675 django.request WARNING  Not Found: /equipment/
+2021-03-17 14:05:18,676 django.server WARNING  "GET /equipment/ HTTP/1.1" 404 2402
+2021-03-17 14:05:18,761 django.request WARNING  Not Found: /equipments/
+2021-03-17 14:05:18,761 django.server WARNING  "GET /equipments/ HTTP/1.1" 404 2405
+2021-03-17 14:05:19,763 django.request WARNING  Not Found: /equipments/
+2021-03-17 14:05:19,763 django.server WARNING  "GET /equipments/ HTTP/1.1" 404 2405
+2021-03-17 14:05:21,498 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2021-03-17 14:05:21,498 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2021-03-17 14:05:21,515 django.server INFO     "GET /api/ HTTP/1.1" 200 5910
+2021-03-17 14:05:21,522 django.server INFO     "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+2021-03-17 14:05:21,540 django.server INFO     "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+2021-03-17 14:05:21,541 django.server INFO     "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+2021-03-17 14:05:21,542 django.server INFO     "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+2021-03-17 14:05:21,542 django.server INFO     "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+2021-03-17 14:05:21,542 django.server INFO     "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+2021-03-17 14:05:21,544 django.server INFO     "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+2021-03-17 14:05:21,549 django.server INFO     "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+2021-03-17 14:05:21,549 django.server INFO     "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+2021-03-17 14:05:21,550 django.server INFO     "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+2021-03-17 14:05:21,549 django.server INFO     "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+2021-03-17 14:05:25,018 MARKDOWN     DEBUG    Successfully imported extension module "markdown.extensions.toc".
+2021-03-17 14:05:25,018 MARKDOWN     DEBUG    Successfully loaded extension "markdown.extensions.toc.TocExtension".
+2021-03-17 14:05:25,029 django.server INFO     "GET /custom/base/ HTTP/1.1" 200 6324
+2021-03-17 14:05:25,098 django.request WARNING  Not Found: /favicon.ico
+2021-03-17 14:05:25,098 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 2405
+2021-03-17 14:13:53,217 django.server INFO     "GET /api/users/ HTTP/1.1" 200 570
+2021-03-17 14:18:27,183 django.server INFO     "GET /api/users/ HTTP/1.1" 200 570
+2021-03-17 14:20:07,223 django.utils.autoreload INFO     /Users/evgeniyshamanin/PycharmProjects/pythonProject/todo_notes/todo_notes/settings.py changed, reloading.
+2021-03-17 14:20:07,223 asyncio      DEBUG    Using selector: KqueueSelector
+2021-03-17 14:58:35,062 asyncio      DEBUG    Using selector: KqueueSelector

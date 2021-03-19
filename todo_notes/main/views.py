@@ -29,7 +29,7 @@ class ProjectLimitOffsetPagination(LimitOffsetPagination):
 
 
 class TodoLimitOffsetPagination(LimitOffsetPagination):
-    default_limit = 20
+    default_limit = 10
 
 
 class ProjectModelViewSet(ModelViewSet):
@@ -37,7 +37,6 @@ class ProjectModelViewSet(ModelViewSet):
     serializer_class = ProjectModelSerializer
     pagination_class = ProjectLimitOffsetPagination
     filterset_class = ProjectFilter
-
 
 
 class TodoModelViewSet(ModelViewSet):

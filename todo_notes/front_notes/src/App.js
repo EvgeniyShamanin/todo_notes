@@ -7,7 +7,7 @@ import NoteList from './components/Notes.js'
 import Footer from './components/Footer.js'
 import Menu from './components/Menu.js'
 import axios from 'axios'
-import {HashRouter, Route} from 'react-router-dom'
+import {HashRouter, BrowserRouter, Route, Link} from 'react-router-dom'
 
 class App extends React.Component {
     constructor(props){
@@ -65,15 +65,17 @@ class App extends React.Component {
 
     render() {
         return(
+
             <div>
-                <HashRouter>
+                <BrowserRouter>
                     <Menu />
                     <Route exact path='/users' component={() => <UserList users={this.state.users} />} />
                     <Route exact path='/projects' component={() => <ProjectList projects={this.state.projects} />} />
-                    <Route exact path='/notes' component={() => <NoteList notes={this.state.notes} />} />
-                </HashRouter>
+                    <Route exact path='/todo' component={() => <NoteList notes={this.state.notes} />} />
+                </BrowserRouter>
                 <Footer />
             </div>
+
         )
 
     }

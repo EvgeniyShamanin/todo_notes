@@ -1,13 +1,12 @@
 import React from 'react'
 import '../index.css'
-import {HashRouter, Link} from 'react-router-dom'
+import {HashRouter, BrowserRouter, Link} from 'react-router-dom'
 
 
 
-const Footer = ({}) => {
+const Menu = ({}) => {
     return (
         <div className='menu'>
-            <HashRouter>
                 <nav>
                     <ul>
                         <li>
@@ -17,13 +16,12 @@ const Footer = ({}) => {
                             <Link to='/users'>Users</Link>
                         </li>
                         <li>
-                            <Link to='/notes'>Notes</Link>
+                            <Link to='/todo'>Notes</Link>
                         </li>
                     </ul>
                 </nav>
-            </HashRouter>
             <p className='footer-text'>Menu</p>
         </div>
     )
 }
-export default Footer
+export default Menu

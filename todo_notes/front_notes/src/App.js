@@ -6,8 +6,10 @@ import ProjectList from './components/Projects.js'
 import NoteList from './components/Notes.js'
 import Footer from './components/Footer.js'
 import Menu from './components/Menu.js'
+import Project from './components/Project.js'
 import axios from 'axios'
-import {HashRouter, BrowserRouter, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Route, withRouter } from 'react-router-dom'
+
 
 class App extends React.Component {
     constructor(props){
@@ -15,7 +17,8 @@ class App extends React.Component {
         this.state = {
             'users': [],
             'projects': [],
-            'notes': []
+            'notes': [],
+            'project': {}
         }
     }
     usersApiRequest(){
@@ -57,10 +60,30 @@ class App extends React.Component {
                 )
             }).catch(error => console.log(error))
     }
+    projectApiRequest(props){
+        console.log(props.match.params.uuid)
+        // return <h1>Hello {props.match.params.uuid}!</h1>;
+        let id = props.match.params.uuid;
+        axios.get(`http://127.0.0.1:8000/api/projects/${id}`)
+            .then(response => {
+                const project = response.data;
+                console.log(project);
+                // debugger
+
+                this.setState(
+                    {
+                        'project': project
+                    }
+                )
+
+            }).then(() => <Project notes={this.state.project} />).catch(error => console.log(error))
+    }
+
     componentDidMount() {
         this.usersApiRequest();
         this.projectsApiRequest();
         this.notesApiRequest();
+        // this.projectApiRequest();
     }
 
     render() {
@@ -68,10 +91,12 @@ class App extends React.Component {
 
             <div>
                 <BrowserRouter>
-                    <Menu />
-                    <Route exact path='/users' component={() => <UserList users={this.state.users} />} />
-                    <Route exact path='/projects' component={() => <ProjectList projects={this.state.projects} />} />
-                    <Route exact path='/todo' component={() => <NoteList notes={this.state.notes} />} />
+
+                        <Menu />
+                        <Route exact path='/users' component={() => <UserList users={this.state.users} />} />
+                        <Route exact path='/projects' component={() => <ProjectList projects={this.state.projects} />} />
+                        <Route exact path='/todo' component={() => <NoteList notes={this.state.notes} />} />
+                        <Route path="/projects/:uuid" component={this.projectApiRequest}/>
                 </BrowserRouter>
                 <Footer />
             </div>

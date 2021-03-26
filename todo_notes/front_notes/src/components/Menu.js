@@ -4,7 +4,7 @@ import {HashRouter, BrowserRouter, Link} from 'react-router-dom'
 
 
 
-const Menu = ({}) => {
+const Menu = ({state, logout}) => {
     return (
         <div className='menu'>
                 <nav>
@@ -17,6 +17,9 @@ const Menu = ({}) => {
                         </li>
                         <li>
                             <Link to='/todo'>Notes</Link>
+                        </li>
+                        <li>
+                            {state.auth.is_login ? <button onClick={()=>logout()}>Logout</button> : <Link to='/login'>Login</Link>}
                         </li>
                     </ul>
                 </nav>

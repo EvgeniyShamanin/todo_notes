@@ -1,2 +1,8 @@
 /venv/
 .idea
+/todo_notes/db.sqlite3
+/node_modules/
+/todo_notes/node_modules/
+/todo_notes/debug.log
+/todo_notes/info.log
+

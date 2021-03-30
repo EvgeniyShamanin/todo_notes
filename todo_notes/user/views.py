@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+from rest_framework.permissions import AllowAny
 from rest_framework.renderers import JSONRenderer
 from rest_framework.viewsets import ModelViewSet
 from .models import User
@@ -36,11 +37,18 @@ from rest_framework import mixins
 #         return Response(status=status.HTTP_200_OK)
 
 
-
 class UserCustomViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin,
                         mixins.UpdateModelMixin, viewsets.GenericViewSet):
+    permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = UserModelSerializer
+
+
+class UserCreateViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    permission_classes = [AllowAny]
+    queryset = User.objects.all()
+    serializer_class = UserModelSerializer
+
 
 
 

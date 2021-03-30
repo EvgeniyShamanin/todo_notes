@@ -1,8 +1,16 @@
 import React from 'react'
+import {
+    useParams
+} from "react-router-dom";
 
-const ProjectItem = ({item}) => {
+const ProjectItem = ({getProject, item}) => {
+    // debugger
+    let { uuid } = useParams();
+    // debugger
+    getProject(uuid)
+    // debugger
     return (
-        <div>{item}</div>
+        <div>{item.name}</div>
     )
 };
 

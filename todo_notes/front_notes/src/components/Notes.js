@@ -2,13 +2,17 @@ import React from 'react'
 
 
 const NoteItem = ({note}) => {
+    // debugger
     return (
         <tr>
             <td>
                 {note.text}
             </td>
             <td>
-                {note.project}
+                {
+                    note.project.name
+
+                }
             </td>
             <td>
                 {note.created}
@@ -27,6 +31,7 @@ const NoteItem = ({note}) => {
 }
 
 const NoteList = ({notes}) => {
+//    debugger
     return (
         <table>
             <th>

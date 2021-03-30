@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny, IsAuthenticate
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from .models import Project, Todo
-from .serializers import ProjectModelSerializer, TodoModelSerializer
+from .serializers import ProjectModelSerializer, TodoModelSerializer, TodoUsuallyModelSerializer
 from django_filters import rest_framework as filters
 
 
@@ -51,3 +51,10 @@ class TodoModelViewSet(ModelViewSet):
         todo.status = False
         todo.save()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class TodoUsuallyModelViewSet(ModelViewSet):
+    queryset = Todo.objects.all()
+    serializer_class = TodoUsuallyModelSerializer
+    pagination_class = TodoLimitOffsetPagination
+    filterset_class = TodoFilter

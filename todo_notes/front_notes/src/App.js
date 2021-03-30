@@ -91,16 +91,26 @@ class App extends React.Component {
                     {
                         'notes': notes
                     }
-                )
+                );
             }).catch(error => console.log(error))
 
     }
 
-    projectApiRequest(props){
-        console.log(props.match.params.uuid)
+    getProject(uuid){
+        // debugger
+        let headers = {
+            'Content-Type': 'application/json'
+        };
+        if (this.state.auth.is_login){
+            const cookies = new Cookies();
+            const token = cookies.get('token');
+            headers['Authorization'] = 'Token ' + token
+        }
+        // console.log(props.match.params.uuid)
         // return <h1>Hello {props.match.params.uuid}!</h1>;
-        let id = props.match.params.uuid;
-        axios.get(`http://127.0.0.1:8000/api/projects/${id}`)
+        // debugger
+        // let id = props.match.params.uuid;
+        axios.get(`http://127.0.0.1:8000/api/projects/${uuid}`, {headers})
             .then(response => {
                 const project = response.data;
                 console.log(project);
@@ -111,8 +121,7 @@ class App extends React.Component {
                         'project': project
                     }
                 )
-
-            }).then(() => <Project notes={this.state.project} />).catch(error => console.log(error))
+            }).catch(error => console.log(error))
     }
 
 
@@ -134,7 +143,8 @@ class App extends React.Component {
                         <Route exact path='/projects' component={() => <ProjectList projects={this.state.projects} />} />
                         <Route exact path='/todo' component={() => <NoteList notes={this.state.notes} />} />
                         <Route exact path='/login' component={() => <LoginForm get_token={(username, password) => this.get_token(username, password)} />} />
-                        <Route path="/projects/:uuid" component={this.projectApiRequest}/>
+                        {/*<Route path="/projects/:uuid" component={this.projectApiRequest}/>*/}
+                        <Route path="/projects/:uuid" children={<Project getProject={(uuid) => this.getProject(uuid)} item={this.state.project} />} />
                 </BrowserRouter>
                 <Footer />
             </div>

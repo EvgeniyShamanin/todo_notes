@@ -12,3 +12,9 @@ class UserModelSerializer(ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+
+
+class UserModelUpdateSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email', 'username', 'is_superuser', 'is_staff']
